@@ -1,0 +1,107 @@
+#header {
+    width: 100%;
+    height: 100vh;
+    /* background: red; */
+    /* background-size: cover;
+    background-position: center;  */
+}
+
+#nav {
+    background-color: rgb(96, 96, 158);
+    font-size: 5px;
+    /* font-weight: 100; */
+    color: white;
+    /* border: 2px solid black; */
+    padding-left: 5px;
+    /* padding-top: 3px; */
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#header-logo{
+    /* border: 2px solid black; */
+    height: 60px
+}
+
+.header-img {
+    position: absolute;
+    height: 22%;
+    width: 15%;
+    top: 0%;
+}
+
+
+#login-outer-container {
+    /* border: 2px solid black; */
+    height: 31rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+.login-inner-container {
+    /* margin-left: 20%;
+    margin-right: 20%; */
+    height: 100%;
+    width: 100%;
+    background: rgb(60, 60, 96);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.main-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    height: 20rem;
+    width: 30rem;
+}
+
+.login-head {
+    /* border: 2px solid black; */
+    position: absolute;
+    top: 13rem;
+}
+.login-head h1{
+    color: rgb(84, 83, 83);
+}
+
+.textbox-for-username-and-password {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.login-form button {
+    background-color: rgb(96, 96, 158);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-form button:hover {
+    background-color: rgb(84, 83, 83);
+}
