@@ -1,3 +1,4 @@
+// src\app\login\login.component.ts
 import { Component, OnInit } from '@angular/core';
 
 @Component({
