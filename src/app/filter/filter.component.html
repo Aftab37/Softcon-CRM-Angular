@@ -19,40 +19,15 @@
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
-        <li>
+        <li *ngFor="let group of groups">
           <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
+          {{group}}
         </li>
       </ul>
     </div>
   </div>
 
   <div class="wrapper" [class.active]="isActive[1]">
-  
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(1)">
       <span>Select Source Name</span>
@@ -66,33 +41,9 @@
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
-        <li>
+        <li *ngFor="let sourceName of sourceNames">
           <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
+          {{sourceName}}
         </li>
       </ul>
     </div>
@@ -100,7 +51,7 @@
 
 
   <div class="wrapper" [class.active]="isActive[2]">
-  
+
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(2)">
       <span>Select Name</span>
@@ -114,40 +65,16 @@
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
-        <li>
+        <li *ngFor="let name of names">
           <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
+          {{name}}
         </li>
       </ul>
     </div>
   </div>
 
   <div class="wrapper" [class.active]="isActive[3]">
-  
+
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(3)">
       <span>Select State</span>
@@ -161,40 +88,15 @@
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
-        <li>
+        <li *ngFor="let state of states">
           <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
+          {{state}}
         </li>
       </ul>
     </div>
   </div>
 
   <div class="wrapper" [class.active]="isActive[4]">
-  
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(4)">
       <span>Select City</span>
@@ -208,33 +110,9 @@
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
-        <li>
+        <li *ngFor="let city of cities">
           <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
+          {{city}}
         </li>
       </ul>
     </div>
@@ -254,33 +132,9 @@
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
-        <li>
+        <li *ngFor="let zone of zones">
           <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
+          {{zone}}
         </li>
       </ul>
     </div>
@@ -300,33 +154,9 @@
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
-        <li>
+        <li *ngFor="let area of areas">
           <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
-        </li>
-        <li>
-          <input type="checkbox">
-          SDFASDF
+          {{area}}
         </li>
       </ul>
     </div>

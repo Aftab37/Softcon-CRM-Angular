@@ -15,4 +15,32 @@ export class SharedServiceService {
   getTopFiveData(): Observable<any> {
     return this.http.get<any>(this.baseApiUrl + '/api/SoftconClientData');
   }
+
+  getAllGroups(): Observable<any> {
+    return this.http.get<any>(this.baseApiUrl + '/api/GetGroups');
+  }
+
+  getAllStates(): Observable<any> {
+    return this.http.get<any>(this.baseApiUrl + '/api/GetStates');
+  }
+
+  getAllCities(): Observable<any> {
+    return this.http.get<any>(this.baseApiUrl + '/api/GetCities');
+  }
+
+  getAllZones(): Observable<any> {  
+    return this.http.get<any>(this.baseApiUrl + '/api/GetZones');
+  }
+
+  getAllAreas(): Observable<any> {
+   return this.http.get<any>(this.baseApiUrl + '/api/GetArea');
+  }
+
+  getAllSourceNames(): Observable<any> {
+    return this.http.get<any>(this.baseApiUrl + '/api/GetSourceNames');
+  }
+
+  getAllNames(): Observable<any> {  
+    return this.http.get<any>(this.baseApiUrl + '/api/GetCustomerName');
+  }
 }

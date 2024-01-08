@@ -14,11 +14,17 @@ export class FilterTableComponent implements OnInit {
 
   clients: any[] = [];
   ngOnInit(): void {
+    this.getTopFiveData();
+  }
+
+  getTopFiveData() {
     this.sharedService.getTopFiveData().subscribe(data => {
       this.clients = data;
       console.log(this.clients);
     });
   }
+  
+  
 
 
 

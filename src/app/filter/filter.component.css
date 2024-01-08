@@ -70,6 +70,10 @@ hr {
   /* border: 1px solid #C568C5; */
 }
 
+.select-btn:hover {
+background: #b3b3b3;
+}
+
 .select-btn,
 li {
   display: flex;
@@ -149,16 +153,19 @@ li {
   margin-top: 10px;
   max-height: 200px;
   overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 7px;
 }
 
 .options::-webkit-scrollbar {
   width: 7px;
+  /* height: 7px; */
 }
 
 .options::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 25px;
+  width: 50px;
 }
 
 .options::-webkit-scrollbar-thumb {
@@ -174,9 +181,12 @@ li {
 .options li {
   display: flex;
   align-items: center;
-  height: 35px;
+  height: 40px;
   padding: 0 30px;
   font-size: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
 }
 
 .options li input[type="checkbox"] {
