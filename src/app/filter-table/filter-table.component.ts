@@ -1,6 +1,7 @@
 // src\app\filter-table\filter-table.component.ts
 
 import { Component, OnInit } from '@angular/core';
+import { SharedServiceService } from '../service/shared-service.service';
 
 @Component({
   selector: 'app-filter-table',
@@ -9,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sharedService: SharedServiceService) { }
 
+  clients: any[] = [];
   ngOnInit(): void {
+    this.sharedService.getTopFiveData().subscribe(data => {
+      this.clients = data;
+      console.log(this.clients);
+    });
   }
 
+
+
+
+
 }
+
+
+
+  
+
+
+
+

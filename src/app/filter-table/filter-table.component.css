@@ -1,5 +1,13 @@
 /* src\app\filter-table\filter-table.component.css */
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
 .container-div{
     border: 1px solid black;
     font-family: Arial, Helvetica, sans-serif;
@@ -146,7 +154,11 @@
 
 .tabledata{
     /* border: 1px solid green; */
-    height: 40%;
+    /* height: 40%;
+    width: 50%; */
+    height: 45%;
+    width: 80%;
+    padding: 10px;
 }
 
 .sampletxt{
