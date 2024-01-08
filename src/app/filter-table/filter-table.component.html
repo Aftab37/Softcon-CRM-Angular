@@ -67,6 +67,7 @@
             </tr>
           </thead>
           <tbody>
+            <tr *ngFor="let client of clients.slice(0,5)">
               <td>{{client.recordCreated}}</td>
               <td>{{client.type}}</td>
               <td>{{client.customerName}}</td>
