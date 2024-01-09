@@ -68,7 +68,7 @@
           </thead>
           <tbody>
             <tr *ngFor="let client of clients.slice(0,5)">
-              <td>{{client.recordCreated}}</td>
+              <td>{{client.recordCreated | date:'yyyy-MM-dd'}}</td>
               <td>{{client.type}}</td>
               <td>{{client.customerName}}</td>
               <td>{{ client.area }}</td>
