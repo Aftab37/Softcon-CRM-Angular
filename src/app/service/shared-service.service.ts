@@ -13,7 +13,7 @@ export class SharedServiceService {
   constructor(private http: HttpClient) { }
 
   getTopFiveData(): Observable<any> {
-    return this.http.get<any>(this.baseApiUrl + '/api/SoftconClientData');
+    return this.http.get<any>(this.baseApiUrl + '/api/GetAllClientData');
   }
 
   getAllGroups(): Observable<any> {
