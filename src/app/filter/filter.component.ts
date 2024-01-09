@@ -15,13 +15,13 @@ export class FilterComponent implements OnInit {
   constructor(private sharedService: SharedServiceService) { }
 
   ngOnInit(): void {
-    this.getAllCities();
     this.getAllGroups();
     this.getAllStates();
+    this.getAllCities();
     this.getAllZones();
     this.getAllAreas();
-    this.getAllSourceNames();
     this.getAllNames();
+    this.getAllSourceNames();
   }
 
   public isActive: boolean[] = [false];
@@ -32,13 +32,14 @@ export class FilterComponent implements OnInit {
 
   // thisMuchDropdown: string[] = ['forGroup', 'forSourceName', 'forArea', 'forCity', 'forState'];
 
-
-
-  
+  //#region All methods for the dropdown selection APIs
+  /// <summary>
+  /// Aftab Ansari - 8 January 2024
+  /// </summary>
   
   //#region Api Connection of getAllGroups
   /// <summary>
-  /// This method is used to get a list of all the distinct cities in the database
+  /// This method is used to get a list of all the distinct groups in the database
   /// </summary>
   groups: any[] = [];  
   getAllGroups() {
@@ -51,7 +52,7 @@ export class FilterComponent implements OnInit {
 
   //#region Api Connection of getAllStates
   /// <summary>
-  /// This method is used to get a list of all the distinct cities in the database
+  /// This method is used to get a list of all the distinct states in the database
   /// </summary>
   states: any[] = [];
   getAllStates() {
@@ -77,7 +78,7 @@ export class FilterComponent implements OnInit {
 
   //#region Api Connection of getAllZones
   /// <summary>
-  /// This method is used to get a list of all the distinct cities in the database
+  /// This method is used to get a list of all the distinct zones in the database
   /// </summary>
   zones: any[] = [];
   getAllZones() {
@@ -91,7 +92,7 @@ export class FilterComponent implements OnInit {
 
   //#region Api Connection of getAllArea
   /// <summary>
-  /// This method is used to get a list of all the distinct cities in the database
+  /// This method is used to get a list of all the distinct areas in the database
   /// </summary>
   areas: any[] = [];
   getAllAreas() {
@@ -104,7 +105,7 @@ export class FilterComponent implements OnInit {
 
   //#region Api Connection of getAllSourceNames
   /// <summary>
-  /// This method is used to get a list of all the distinct cities in the database
+  /// This method is used to get a list of all the distinct source names in the database
   /// </summary>
   sourceNames: any[] = [];
   getAllSourceNames() {
@@ -117,7 +118,7 @@ export class FilterComponent implements OnInit {
 
   //#region Api Connection of getAllNames
   /// <summary>
-  /// This method is used to get a list of all the distinct cities in the database
+  /// This method is used to get a list of all the distinct names in the database
   /// </summary>
   names: any[] = [];
   getAllNames() {
@@ -127,6 +128,8 @@ export class FilterComponent implements OnInit {
     });
   
     }
+  //#endregion
+
   //#endregion
 
 }
