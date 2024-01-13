@@ -1,0 +1,165 @@
+<!-- src\app\filter\filter.component.html -->
+
+<!-- Aftab Ansari: 12 Jan 2024 -->
+
+<div class="lineThatSaysFilter">
+  <h1>Filter</h1>
+  <hr>
+</div>
+<!-- ******************************************************************************************************* -->
+<div class="dropdown-div">
+  <div class="wrapper" [class.active]="isActive[0]">
+    <div class="simple-line"></div>
+    <div class="select-btn" (click)="toggleDropdown(0)">
+      <span>Select Group</span>
+      <i class="fa-solid fa-caret-down down-arrow-dropdown"></i>
+    </div>
+    <hr>
+    <div class="content">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
+      </div>
+      <ul class="options">
+        <li *ngFor="let group of groups; let i = index" >
+          <input type="checkbox" (change)="onGroupCheckboxChange(i)">
+          {{group}}
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- ******************************************************************************************************* -->
+  <div class="wrapper" [class.active]="isActive[1]">
+    <div class="simple-line"></div>
+    <div class="select-btn" (click)="toggleDropdown(1)">
+      <span>Select Source Name</span>
+      <i class="fa-solid fa-caret-down down-arrow-dropdown"></i>
+    </div>
+    <hr>
+    <div class="content">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
+      </div>
+      <ul class="options">
+        <li *ngFor="let sourceName of sourceNames; let i = index">
+          <input type="checkbox" (change)="onSourceNameCheckboxChange(i)">
+          {{sourceName}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- ****************************************************************************************************** -->
+  <div class="wrapper" [class.active]="isActive[2]">
+    <div class="simple-line"></div>
+    <div class="select-btn" (click)="toggleDropdown(2)">
+      <span>Select Name</span>
+      <i class="fa-solid fa-caret-down down-arrow-dropdown"></i>
+    </div>
+    <hr>
+    <div class="content">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
+      </div>
+      <ul class="options">
+        <li *ngFor="let name of names; let i = index">
+          <input type="checkbox" (change)="onNameCheckboxChange(i)">
+          {{name}}
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- ******************************************************************************************************* -->
+  <div class="wrapper" [class.active]="isActive[3]">
+    <div class="simple-line"></div>
+    <div class="select-btn" (click)="toggleDropdown(3)">
+      <span>Select State</span>
+      <i class="fa-solid fa-caret-down down-arrow-dropdown"></i>
+    </div>
+    <hr>
+    <div class="content">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
+      </div>
+      <ul class="options">
+        <li *ngFor="let state of states; let i = index">
+          <input type="checkbox" (change)="onStateCheckboxChange(i)">
+          {{state}}
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- ******************************************************************************************************** -->
+  <div class="wrapper" [class.active]="isActive[4]">
+    <div class="simple-line"></div>
+    <div class="select-btn" (click)="toggleDropdown(4)">
+      <span>Select City</span>
+      <i class="fa-solid fa-caret-down down-arrow-dropdown"></i>
+    </div>
+    <hr>
+    <div class="content">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
+      </div>
+      <ul class="options">
+        <li *ngFor="let city of cities; let i = index">
+          <input type="checkbox" (change)="onCityCheckboxChange(i)">
+          {{city}}
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- ******************************************************************************************************** -->
+  <div class="wrapper" [class.active]="isActive[5]">
+    <div class="simple-line"></div>
+    <div class="select-btn" (click)="toggleDropdown(5)">
+      <span>Select Zone</span>
+      <i class="fa-solid fa-caret-down down-arrow-dropdown"></i>
+    </div>
+    <hr>
+    <div class="content">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
+      </div>
+      <ul class="options">
+        <li *ngFor="let zone of zones; let i = index">
+          <input type="checkbox" (change)="onZoneCheckboxChange(i)">
+          {{zone}}
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- ******************************************************************************************************** -->
+  <div class="wrapper" [class.active]="isActive[6]">
+    <div class="simple-line"></div>
+    <div class="select-btn" (click)="toggleDropdown(6)">
+      <span>Select Area</span>
+      <i class="fa-solid fa-caret-down down-arrow-dropdown"></i>
+    </div>
+    <hr>
+    <div class="content">
+      <div class="search">
+        <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
+      </div>
+      <ul class="options">
+        <li *ngFor="let area of areas; let i = index">
+          <input type="checkbox" (change)="onAreaCheckboxChange(i)">
+          {{area}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

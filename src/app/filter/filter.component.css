@@ -1,0 +1,219 @@
+
+/* src\app\smart-filter\smart-filter.component.css */
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lineThatSaysFilter h1{
+  font-size: 40px;
+  margin: 20px 0 0 30px;
+  margin-bottom: 0px;
+}
+
+.lineThatSaysFilter hr {
+  width: 80%;
+  margin: 25px;
+  margin-top: 0px;
+}
+
+.dropdown-div {
+  height: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  left: 2%;
+  width: 275px;
+  padding: 10px;
+}
+
+.dropdown-div::-webkit-scrollbar {
+  display: none;
+}
+
+::selection{
+    color: #fff;
+  }
+
+.wrapper {
+  width: 90%;
+  margin-top: 20px;
+}
+
+hr {
+  margin: 5px;
+  border: 1px solid rgb(105, 105, 239);
+  background: blue;
+  width: 100%;
+}
+
+.select-btn {
+  height: 30px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 7px;
+  justify-content: space-between;
+}
+
+.select-btn:hover {
+background: #b3b3b3;
+}
+
+.select-btn,
+li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.down-arrow-dropdown {
+  font-size: 16px;
+  transition: transform 0.3s linear;
+  color: rgb(130, 2, 130);
+}
+
+.wrapper.active .select-btn i {
+  transform: rotate(-180deg);
+}
+
+.content {
+  display: none;
+  padding-top: 0;
+  margin-top: 5px;
+  border-radius: 7px;
+}
+
+.wrapper.active .content {
+  display: block;
+}
+
+.content .search {
+  position: relative;
+}
+
+.dropdown-search-icon {
+  top: 51%;
+  left: 21px;
+  color: rgb(92, 2, 92);
+  font-size: 14px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  position: absolute;
+}
+
+.input-dropdown {
+  height: 25px;
+  width: 77%;
+  outline: none;
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 0 20px 0 30px;
+  border: 1px solid #e1e0e0;
+  margin-right: 7px;
+  margin-left: 15px;
+}
+
+.dropdown-search-mic-icon {
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(92, 2, 92);
+}
+
+.input-dropdown:focus {
+  padding-left: 30px;
+  border: 2px solid rgb(168, 140, 248);
+}
+
+.input-dropdown::placeholder {
+  color: #bfbfbf;
+}
+
+.content .options {
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 7px;
+}
+
+.options::-webkit-scrollbar {
+  width: 7px;
+}
+
+.options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 25px;
+  width: 50px;
+}
+
+.options::-webkit-scrollbar-thumb {
+  background: rgb(140, 87, 237);
+  border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+}
+
+.options li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 30px;
+  font-size: 15px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+.options li input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.options li:hover,
+li.selected {
+  border-radius: 5px;
+  background: rgb(205, 188, 254);
+}
+
+.options li input[type="checkbox"]{
+  background: rgb(255, 202, 240);
+  color: rgb(92, 2, 92); 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+  height: 8%;
+  position: relative;
+}
+
+.apply-button,
+.clear-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  width: 45%;
+}
+
+.apply-button {
+  background-color: green;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.clear-button {
+  background-color: red;
+  color: #fff;
+}

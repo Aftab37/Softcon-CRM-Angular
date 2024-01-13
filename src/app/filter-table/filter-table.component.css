@@ -1,0 +1,317 @@
+/* src\app\filter-table\filter-table.component.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+.container-div{
+    /* border: 1px solid black; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    height: 100vh;
+    width: 100vw;
+}
+
+.maketingData{
+    border: 1px solid black;
+    height: 6%;
+    background-color: rgb(118, 118, 246);
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.marketingText{
+    /* margin-top: 1%; */
+    margin-left: 1%;
+}
+
+.menu{
+    /* border: 1px solid black; */
+    height: 6%;
+    display: flex;
+    align-items: center;
+}
+
+.menu i{
+    margin-left: 1%;
+    font-size: 26px;
+    color: rgb(118, 118, 246);
+}
+
+.data{
+    display: flex;
+    height: 88%;
+    /* border: 1px solid black; */
+}
+
+.filter-div{
+    /* border: 1px solid red; */
+    width: 20%;
+    background: #2b3f5d33;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.display-data{
+    /* border: 1px solid black; */
+    width: 80%;
+    /* height: 80vh; */
+}
+
+.chk-date{
+    display: flex;
+    height: 6%;
+    /* border: 1px solid red; */
+}
+
+.checkboxes{
+    display: flex;
+    width: 54%;
+    /* justify-content: space-evenly; */
+    /* border: 1px solid blue; */
+}
+
+.chk-div{
+    /* border: 1px solid green; */
+    display: flex;
+    width: 24%;
+    margin-left: 3%;
+    align-items: center;
+    font-size: 16px;
+}
+
+.chk{
+    margin-right: 5%;
+    /* height: 30%; */
+    /* width: 30%; */
+    margin-top: -2%;
+}
+
+.customize-dates{
+    display: flex;
+    width: 46%;
+    /* border: 1px solid blue; */
+}
+
+.fromdate{
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+    width: 35%;
+    /* font-weight: 500; */
+    /* border: 1px solid blue; */
+}
+
+.todate{
+    display: flex;
+    align-items: center;
+    margin-left: 8%;
+    width: 35%;
+    /* border: 1px solid blue; */
+}
+
+.inputdate{
+    margin-left: 4%;
+    margin-top: -2%;
+    border-radius: 6px;
+}
+
+.applied-filter{
+    margin-top: 0.5%;
+    margin-left: 2%;
+}
+
+.Selected-Dropdown-Badges {
+    /* border: 1px solid red; */
+    margin-top: 5px;
+    height: 6%;
+    border-radius: 0px;
+    
+}
+
+
+.btn {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px 0 10px
+}
+
+.badges {
+    margin-left: 5%;
+    display: flex;
+    
+}
+
+.badge {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px 0 10px;
+    width: 40px;
+    color: black;
+    font-size: 15px;
+   
+
+}
+
+/* .individual-badge {
+    display: inline;
+
+} */
+
+.filter{
+    border: 1px solid red;
+    position: relative;
+    width: 5%;
+    text-align: center;
+    margin-left: 2%;
+    /* margin-top: 2%; */
+}
+
+.filtername{
+    margin-top: 6%;
+}
+
+.filter i{
+    /* margin-left: 1%; */
+    position: absolute;
+    margin-top: -10%;
+    /* margin-left: 42%; */
+}
+
+.tabledata{
+    /* border: 1px solid green; */
+    /* height: 40%;
+    width: 50%; */
+    height: 350px;
+    width: 90%;
+    padding: 10px;
+    margin-left: 4%;
+    
+}
+
+.table {
+    /* position: relative; */
+    top: 0%;
+    height: 80%;
+    width: 100%;
+    margin-left: 0%;
+}
+
+
+
+.sampletxt{
+    margin-left: 6%;
+    margin-top: 2%;
+    text-decoration: underline;
+}
+
+table,th,td{
+    border: 1px solid black;
+}
+
+table{
+    margin-left: 6%;
+    text-align: center;
+}
+
+th{
+    /* width: 10%; */
+    /* background-color: rgb(118, 118, 246); */
+    color: #fff;
+}
+
+.noteText{
+    margin-left: 6%;
+    margin-top: 2%;
+    font-size: 16px;
+}
+
+.notelbl{
+    font-weight: 600;
+}
+
+.buttons-div{
+    /* border: 1px solid red; */
+    /* height: 100px; */
+    /* text-align: center; */
+   
+    /* border: 2px solid red;    */
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    width: 100%;
+    
+}
+
+.btn-load{
+  
+    margin-left: 40%;
+    margin-top: 2%;
+    width: 8%;
+    height: 14%;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgb(118, 118, 246);
+    color: #fff;
+    border: none;
+
+}
+
+.displayrecords{
+    /* border: 1px solid red; */
+    width: 14%;
+    margin-left: 37%;
+    margin-top: 2%;
+}
+
+.lblrecords{
+    margin-left: 10%;
+    margin-top: 2%;
+    font-weight: 600;
+}
+
+.totalrecords{
+    margin-left: 3%;
+    margin-top: 2%;
+    
+}
+
+.btn-download{
+    margin-left: 38%;
+    margin-top: 2%;
+    width: 12%;
+    height: 14%;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgb(118, 118, 246);
+    color: #fff;
+    border: none;
+}
+
+.show-record{
+    /* border: 1px solid blue; */
+    height: 8%;
+}
+
+.lbldate{
+    margin-left: 6%;
+    /* border: 1px solid blue; */
+    font-size: 16px;
+    /* margin-top: 1%; */
+}
+
+.recorddate{
+    /* border: 1px solid blue; */
+    font-size: 16px;
+    margin-left: 1%;
+}
+
+.filter-dropdowns-div {
+/* margin-top: 50%; */
+
+}
