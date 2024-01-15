@@ -19,12 +19,12 @@
                 <div class="textbox-for-username-and-password">
                     <form class="login-form">
                         <!-- <label for="username">Username:</label> -->
-                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                        <input type="text" id="username" name="username" [(ngModel)]="EnteredUserName" placeholder="Enter your username" required>
 
                         <!-- <label for="password">Password:</label> -->
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <input type="password" id="password" name="password" [(ngModel)]="EnteredPassword" placeholder="Enter your password" required>
 
-                        <button type="submit">Login</button>
+                        <button type="submit" (click)="verifyLogin()">Login</button>
                     </form>
 
 

@@ -14,7 +14,12 @@
   </div>
   <div class="data">
     <div class="filter-div">
-      <app-filter></app-filter>
+      <app-filter (selectedCitiesChange)="onSelectedCitiesChange($event)"
+        (selectedGroupsChange)="onSelectedGroupsChange($event)"
+        (selectedSourceNamesChange)="onSelectedSourceNamesChange($event)"
+        (selectedNamesChange)="onSelectedNamesChange($event)" (selectedStatesChange)="onSelectedStatesChange($event)"
+        (selectedZonesChange)="onSelectedZonesChange($event)" (selectedAreasChange)="onSelectedAreasChange($event)">
+      </app-filter>
     </div>
     <div class="display-data">
       <div class="chk-date">
@@ -35,25 +40,61 @@
         <div class="customize-dates">
           <div class="fromdate">
             <label class="datelbl"><b>From Date</b></label>
-            <input type="date" class="inputdate">
+            <input type="date" class="inputdate" [(ngModel)]="fromDate">
           </div>
           <div class="todate">
             <label class="datelbl"><b>To Date</b></label>
-            <input type="date" class="inputdate">
+            <input type="date" class="inputdate" [(ngModel)]="toDate">
           </div>
         </div>
       </div>
-      <div class="filtershow">
-        <label class="applied-filter"><b>Applied Filter</b></label>
-        <div class="filter">
+      <label class="applied-filter"><b>Applied Filter</b></label>
+      <div class="Selected-Dropdown-Badges">
+        <!-- <div class="filter">
           <label class="filtername">Group</label>
           <i class="fa-solid fa-xmark"></i>
-        </div>
+        </div> -->
+        <div class="badges" >
+          <div class="individual-badge" *ngIf="selectedGroups.length > 0">
+            <button type="button" class="btn btn-danger">
+              Groups <span class="badge bg-warning">{{selectedGroups.length}}</span>
+            </button>
+          </div>
+          <div class="individual-badges" *ngIf="selectedSourceNames.length > 0">
+            <button type="button" class="btn btn-danger">
+              Source Name <span class="badge bg-warning">{{selectedSourceNames.length}}</span>
+            </button>
+          </div>
+          <div class="individual-badges" *ngIf="selectedNames.length > 0">
+            <button type="button" class="btn btn-danger">
+              Names <span class="badge bg-warning">{{selectedNames.length}}</span>
+            </button>
+          </div>
+          <div class="individual-badges" *ngIf="selectedStates.length > 0">
+            <button type="button" class="btn btn-danger">
+              States <span class="badge bg-warning">{{selectedStates.length}}</span>
+            </button>
+          </div>
+          <div class="individual-badges" *ngIf="selectedCities.length > 0">
+            <button type="button" class="btn btn-danger">
+              Cities <span class="badge bg-warning">{{selectedCities.length}}</span>
+            </button>
+          </div>
+          <div class="individual-badges" *ngIf="selectedZones.length > 0">
+            <button type="button" class="btn btn-danger">
+              Zones <span class="badge bg-warning">{{selectedZones.length}}</span>
+            </button>
+          </div>
+          <div class="individual-badges" *ngIf="selectedAreas.length > 0">
+            <button type="button" class="btn btn-danger">
+              Areas <span class="badge bg-warning">{{selectedAreas.length}}</span>
+            </button>
+          </div>
       </div>
+      <label class="sampletxt">Sample Data</label>
       <div class="tabledata">
-        <label class="sampletxt">Sample Data</label>
-        <table style="border: 1px solid black;">
-          <thead>
+        <table class="table" style="border: 1px solid black;">
+          <thead class="table-dark">
             <tr>
               <th>Created Date</th>
               <th>Group</th>
@@ -67,39 +108,39 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let client of clients.slice(0,5)">
-              <td>{{client.recordCreated | date:'yyyy-MM-dd'}}</td>
-              <td>{{client.type}}</td>
-              <td>{{client.customerName}}</td>
-              <td>{{ client.area }}</td>
-              <td>{{ client.city }}</td>
-              <td>{{ client.state }}</td>
-              <td>{{client.mobileNo1}}</td>
-              <td>{{client.email1}}</td>
-              <td>{{ client.phone1 }}</td>
+            <tr *ngFor="let data of filteredData.slice(0,5)">
+              <td>{{data.recordCreated | date:'yyyy-MM-dd'}}</td>
+              <td>{{data.type}}</td>
+              <td>{{data.customerName}}</td>
+              <td>{{data.area}}</td>
+              <td>{{data.city}}</td>
+              <td>{{data.state}}</td>
+              <td>{{data.mobileNo1}}</td>
+              <td>{{data.email1}}</td>
+              <td>{{ data.phone1 }}</td>
             </tr>
           </tbody>
         </table>
-        <!-- <div class="noteText">
-          <label class="notelbl">Note:</label>
-          <span class="text">"Only the top 5 records are displayed in this sample data." To view all the data, please
-            click on 'Download Data' after applying the desired filters. The filtered data will be generated and saved
-            in a CSV file
-          </span>
-        </div> -->
       </div>
+      <!-- <div class="noteText">
+        <label class="notelbl">Note:</label>
+        <span class="text">"Only the top 5 records are displayed in this sample data." To view all the data, please
+          click on 'Download Data' after applying the desired filters. The filtered data will be generated and saved
+          in a CSV file
+        </span>
+      </div> -->
       <div class="buttons-div">
-        <button class="btn-load">Load Data</button>
+        <button class="btn-load" (click)="filterData()">Load Data</button>
         <div class="displayrecords">
           <label class="lblrecords">Total Records:</label>
-          <label class="totalrecords">100000</label>
+          <label class="totalrecords">{{filteredData.length}}</label>
         </div>
-        <button class="btn-download">Download Data</button>
+        <button class="btn-download" (click)="DownloadData()">Download Data</button>
       </div>
-      <div class="show-record">
+      <!-- <div class="show-record">
         <label class="lbldate">Last Generated Record Date:</label>
         <label class="recorddate">01-01-2023</label>
       </div>
+    </div> -->
     </div>
   </div>
-</div>

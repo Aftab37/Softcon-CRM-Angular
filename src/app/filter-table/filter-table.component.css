@@ -1,6 +1,5 @@
 /* src\app\filter-table\filter-table.component.css */
 
-
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,7 @@
   }
   
 .container-div{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     height: 100vh;
@@ -122,15 +121,47 @@
     border-radius: 6px;
 }
 
-.filtershow{
-    /* border: 1px solid red; */
-    height: 10.5%;
-}
-
 .applied-filter{
     margin-top: 0.5%;
     margin-left: 2%;
 }
+
+.Selected-Dropdown-Badges {
+    /* border: 1px solid red; */
+    margin-top: 5px;
+    height: 6%;
+    border-radius: 0px;
+    
+}
+
+
+.btn {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px 0 10px
+}
+
+.badges {
+    margin-left: 5%;
+    display: flex;
+    
+}
+
+.badge {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 5px 0 10px;
+    width: 40px;
+    color: black;
+    font-size: 15px;
+   
+
+}
+
+/* .individual-badge {
+    display: inline;
+
+} */
 
 .filter{
     border: 1px solid red;
@@ -156,10 +187,22 @@
     /* border: 1px solid green; */
     /* height: 40%;
     width: 50%; */
-    height: 45%;
-    width: 80%;
+    height: 350px;
+    width: 90%;
     padding: 10px;
+    margin-left: 4%;
+    
 }
+
+.table {
+    /* position: relative; */
+    top: 0%;
+    height: 80%;
+    width: 100%;
+    margin-left: 0%;
+}
+
+
 
 .sampletxt{
     margin-left: 6%;
@@ -177,8 +220,8 @@ table{
 }
 
 th{
-    width: 10%;
-    background-color: rgb(118, 118, 246);
+    /* width: 10%; */
+    /* background-color: rgb(118, 118, 246); */
     color: #fff;
 }
 
@@ -194,12 +237,19 @@ th{
 
 .buttons-div{
     /* border: 1px solid red; */
-    height: 34%;
+    /* height: 100px; */
     /* text-align: center; */
+   
+    /* border: 2px solid red;    */
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    width: 100%;
     
 }
 
 .btn-load{
+  
     margin-left: 40%;
     margin-top: 2%;
     width: 8%;
@@ -209,6 +259,7 @@ th{
     background-color: rgb(118, 118, 246);
     color: #fff;
     border: none;
+
 }
 
 .displayrecords{
@@ -227,6 +278,7 @@ th{
 .totalrecords{
     margin-left: 3%;
     margin-top: 2%;
+    
 }
 
 .btn-download{

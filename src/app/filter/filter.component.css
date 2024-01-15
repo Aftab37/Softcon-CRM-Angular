@@ -22,11 +22,8 @@
   margin-top: 0px;
 }
 
-/* **************************************** */
 .dropdown-div {
-  /* margin-bottom: 20px; */
   height: 70%;
-  /* border: 1px solid black; */
   overflow-y: auto;
   overflow-x: hidden;
   position: absolute;
@@ -44,9 +41,7 @@
   }
 
 .wrapper {
-  /* width: 370px; */
   width: 90%;
-  /* margin: 20px auto 0; */
   margin-top: 20px;
 }
 
@@ -62,12 +57,8 @@ hr {
   padding: 0 20px;
   font-size: 16px;
   font-weight: bold;
-  /* background: #fff; */
   border-radius: 7px;
   justify-content: space-between;
-  /* box-shadow: 0 10px 25px rgba(0,0,0,0.1); */
-  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
-  /* border: 1px solid #C568C5; */
 }
 
 .select-btn:hover {
@@ -93,13 +84,9 @@ li {
 
 .content {
   display: none;
-  /* padding: 10px; */
   padding-top: 0;
   margin-top: 5px;
-  /* background: #2b3f5d33; */
   border-radius: 7px;
-  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
-  /* border: 2px solid black; */
 }
 
 .wrapper.active .content {
@@ -113,7 +100,6 @@ li {
 .dropdown-search-icon {
   top: 51%;
   left: 21px;
-  /* color: #999; */
   color: rgb(92, 2, 92);
   font-size: 14px;
   pointer-events: none;
@@ -135,7 +121,6 @@ li {
 
 .dropdown-search-mic-icon {
   cursor: pointer;
-  /* margin-left: 5px; */
   font-size: 15px;
   color: rgb(92, 2, 92);
 }
@@ -159,7 +144,6 @@ li {
 
 .options::-webkit-scrollbar {
   width: 7px;
-  /* height: 7px; */
 }
 
 .options::-webkit-scrollbar-track {
@@ -169,7 +153,6 @@ li {
 }
 
 .options::-webkit-scrollbar-thumb {
-  /* background: #ccc; */
   background: rgb(140, 87, 237);
   border-radius: 25px;
 }
@@ -197,29 +180,20 @@ li {
 .options li:hover,
 li.selected {
   border-radius: 5px;
-  /* background: #f2f2f2; */
   background: rgb(205, 188, 254);
 }
 
-/* Style for checked checkbox */
 .options li input[type="checkbox"]{
   background: rgb(255, 202, 240);
-  color: rgb(92, 2, 92); /* Change this color to your desired color */
+  color: rgb(92, 2, 92); 
 }
 
-
-/* .options li label {
-  flex: 1;
-} */
 .button-container {
   display: flex;
   justify-content: center;
-  /* Change to center the buttons */
   margin: 20px 0 20px 0;
-  /* Adjust margin */
   height: 8%;
   position: relative;
-  /* border: 1px solid black; */
 }
 
 .apply-button,
@@ -237,7 +211,6 @@ li.selected {
   background-color: green;
   color: #fff;
   margin-right: 10px;
-  /* Adjust margin between buttons */
 }
 
 .clear-button {

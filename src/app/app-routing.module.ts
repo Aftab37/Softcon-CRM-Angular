@@ -5,7 +5,7 @@ import { FilterComponent } from './filter/filter.component';
 import {FilterTableComponent} from './filter-table/filter-table.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Login', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'filter', component: FilterComponent },
   { path: 'filter-table', component: FilterTableComponent}

@@ -1,6 +1,8 @@
+// Softcon-CRM-Angular\src\app\Models
+
 export interface InputData {
-    FromDate: Date;
-    ToDate: Date;
+    FromDate: string | null;
+    ToDate: string | null;
     Group: string[];
     SourceName: string[];
     Name: string[];
@@ -8,6 +10,6 @@ export interface InputData {
     CityList: string[];
     Zone: string[];
     AreaList: string[];
-    PageNo: number;
+    //PageNo: number;
 }
   
