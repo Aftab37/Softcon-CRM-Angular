@@ -10,6 +10,8 @@ export interface InputData {
     CityList: string[];
     Zone: string[];
     AreaList: string[];
+    SkipBlankMobile: boolean;
+    SkipBlankEmail: boolean;
     //PageNo: number;
 }
   

@@ -27,12 +27,14 @@ export class FilterTableComponent implements OnInit {
     });
   }
 
+  skipBlankMobile : boolean = false;
+  skipBlankEmail : boolean = false;
+
   // fromDate: Date = new Date('2019-04-16T15:57:04.680Z'); 
   // toDate: Date = new Date('2019-04-20T15:57:04.680Z'); 
 
   fromDate: string = '';
   toDate: string = '';
-
   selectedGroups: string[] = [];
   selectedSourceNames: string[] = [];
   selectedNames: string[] = [];
@@ -74,6 +76,7 @@ export class FilterTableComponent implements OnInit {
   filterData(): void {
     console.log(this.fromDate);
     console.log(this.toDate);
+
     const inputData: InputData = {
       FromDate: this.fromDate || null,
       ToDate: this.toDate || null,
@@ -84,6 +87,8 @@ export class FilterTableComponent implements OnInit {
       CityList: this.selectedCities,
       Zone: this.selectedZones,
       AreaList: this.selectedAreas,
+      SkipBlankMobile: this.skipBlankMobile,
+      SkipBlankEmail: this.skipBlankEmail
     };
 
     console.log("inputData", inputData)

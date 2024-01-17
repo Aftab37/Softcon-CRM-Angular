@@ -32,7 +32,7 @@
 
 .menu{
     /* border: 1px solid black; */
-    height: 6%;
+    height: 4%;
     display: flex;
     align-items: center;
 }
@@ -71,26 +71,31 @@
 
 .checkboxes{
     display: flex;
-    width: 54%;
+    width: 55%;
     /* justify-content: space-evenly; */
     /* border: 1px solid blue; */
+    margin-left: 2%;
+    background: #2b3f5d33;
+    border-radius: 5px;
 }
 
 .chk-div{
     /* border: 1px solid green; */
     display: flex;
-    width: 24%;
+    /* width: 24%; */
     margin-left: 3%;
     align-items: center;
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .chk{
-    margin-right: 5%;
+    /* margin-right: 4%; */
     /* height: 30%; */
     /* width: 30%; */
-    margin-top: -2%;
+    /* margin-top: -2%; */
 }
+
 
 .customize-dates{
     display: flex;
@@ -103,6 +108,7 @@
     align-items: center;
     margin-left: 8%;
     width: 35%;
+    font-size: 12px;
     /* font-weight: 500; */
     /* border: 1px solid blue; */
 }
@@ -112,6 +118,7 @@
     align-items: center;
     margin-left: 8%;
     width: 35%;
+    font-size: 12px;
     /* border: 1px solid blue; */
 }
 
@@ -123,45 +130,47 @@
 
 .applied-filter{
     margin-top: 0.5%;
-    margin-left: 2%;
+    margin-left: 2.2%;
 }
 
 .Selected-Dropdown-Badges {
     /* border: 1px solid red; */
-    margin-top: 5px;
+    margin-top: 2px;
     height: 6%;
     border-radius: 0px;
-    
 }
-
 
 .btn {
     padding: 5px;
     border-radius: 5px;
-    margin: 0 5px 0 10px
+    margin: 0 20px 0 2px;
+    position: relative;
+    font-size: 12px;
+    background: #2b3f5d33;
+    border: none;
+    color: black;
+
 }
 
 .badges {
-    margin-left: 5%;
+    margin-left: 2%;
     display: flex;
     
 }
 
 .badge {
     padding: 5px;
-    border-radius: 5px;
-    margin: 0 5px 0 10px;
-    width: 40px;
+    border-radius: 50px;
+    margin: 0 5px 0 5px;
+    width: 20px;
     color: black;
-    font-size: 15px;
-   
-
+    font-size: 10px;
 }
 
-/* .individual-badge {
+.individual-badge {
     display: inline;
 
-} */
+}
 
 .filter{
     border: 1px solid red;
@@ -187,11 +196,10 @@
     /* border: 1px solid green; */
     /* height: 40%;
     width: 50%; */
-    height: 350px;
-    width: 90%;
+    height: 200px;
+    width: 95%;
     padding: 10px;
-    margin-left: 4%;
-    
+    margin-left: 1.5%;
 }
 
 .table {
@@ -200,18 +208,25 @@
     height: 80%;
     width: 100%;
     margin-left: 0%;
+    font-size: 10px;
 }
+.sample-txt-div {
+    /* border: 1px solid #ccc; */
+    /* height: 20%; */
+    margin-top: 1%;
+    /* margin-top: 5px; */
+    /* position: relative; */
 
-
-
+}
 .sampletxt{
-    margin-left: 6%;
-    margin-top: 2%;
+    position: relative;
+    margin-left: 2.5%;
     text-decoration: underline;
 }
 
 table,th,td{
     border: 1px solid black;
+    font-weight: bold;
 }
 
 table{
@@ -223,7 +238,9 @@ th{
     /* width: 10%; */
     /* background-color: rgb(118, 118, 246); */
     color: #fff;
+    height: 100%;
 }
+
 
 .noteText{
     margin-left: 6%;
@@ -241,58 +258,65 @@ th{
     /* text-align: center; */
    
     /* border: 2px solid red;    */
-    position: absolute;
-    bottom: 0;
-    height: 25%;
+    /* position: absolute; */
+    margin-top: 5%;
+    height: 7%;
     width: 100%;
-    
 }
 
 .btn-load{
-  
-    margin-left: 40%;
-    margin-top: 2%;
-    width: 8%;
-    height: 14%;
-    font-size: 16px;
-    border-radius: 10px;
-    background-color: rgb(118, 118, 246);
-    color: #fff;
+    position: absolute;
+    margin-left: 55%;
+    margin-top: 0%;
+    width: 10%;
+    height: 6%;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #2b3f5d33;
+    font-weight: bold;
     border: none;
-
 }
+
+.btn-load:hover {
+    background: #b3b3b3;
+}
+    
 
 .displayrecords{
     /* border: 1px solid red; */
-    width: 14%;
+    /* width: 14%;
     margin-left: 37%;
-    margin-top: 2%;
+    margin-top: 2%; */
 }
 
 .lblrecords{
-    margin-left: 10%;
+    /* margin-left: 10%;
     margin-top: 2%;
-    font-weight: 600;
+    font-weight: 600; */
 }
 
 .totalrecords{
-    margin-left: 3%;
-    margin-top: 2%;
+    /* margin-left: 3%;
+    margin-top: 2%; */
     
 }
 
 .btn-download{
-    margin-left: 38%;
-    margin-top: 2%;
-    width: 12%;
-    height: 14%;
-    font-size: 16px;
-    border-radius: 10px;
-    background-color: rgb(118, 118, 246);
-    color: #fff;
+    position: absolute;
+    margin-left: 66.5%;
+    margin-top: 0%;
+    width: 10%;
+    height: 6%;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #2b3f5d33;
+    font-weight: bold;
     border: none;
 }
 
+.btn-download:hover {
+    background: #b3b3b3;
+}
 .show-record{
     /* border: 1px solid blue; */
     height: 8%;
