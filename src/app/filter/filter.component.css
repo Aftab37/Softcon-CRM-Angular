@@ -183,7 +183,7 @@ li {
 .options li:hover,
 li.selected {
   border-radius: 5px;
-  background: rgb(205, 188, 254);
+  background: #b3b3b3;
 }
 
 .options li input[type="checkbox"]{

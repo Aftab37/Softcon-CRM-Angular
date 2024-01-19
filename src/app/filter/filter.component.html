@@ -23,7 +23,7 @@
       </div>
       <ul class="options">
         <li *ngFor="let group of groups; let i = index" >
-          <input type="checkbox" (change)="onGroupCheckboxChange(i)">
+          <input type="checkbox" (change)="onGroupCheckboxChange(i)" [checked]="selected_Groups.includes(group)">
           {{group}}
         </li>
       </ul>
@@ -45,7 +45,7 @@
       </div>
       <ul class="options">
         <li *ngFor="let sourceName of sourceNames; let i = index">
-          <input type="checkbox" (change)="onSourceNameCheckboxChange(i)">
+          <input type="checkbox" (change)="onSourceNameCheckboxChange(i)" [checked]="selected_SourceNames.includes(sourceName)">
           {{sourceName}}
         </li>
       </ul>
@@ -67,7 +67,7 @@
       </div>
       <ul class="options">
         <li *ngFor="let name of names; let i = index">
-          <input type="checkbox" (change)="onNameCheckboxChange(i)">
+          <input type="checkbox" (change)="onNameCheckboxChange(i)" [checked]="selected_Names.includes(name)" >
           {{name}}
         </li>
       </ul>
@@ -89,7 +89,7 @@
       </div>
       <ul class="options">
         <li *ngFor="let state of states; let i = index">
-          <input type="checkbox" (change)="onStateCheckboxChange(i)">
+          <input type="checkbox" (change)="onStateCheckboxChange(i)" [checked]="selected_States.includes(state)" >
           {{state}}
         </li>
       </ul>
@@ -111,7 +111,7 @@
       </div>
       <ul class="options">
         <li *ngFor="let city of cities; let i = index">
-          <input type="checkbox" (change)="onCityCheckboxChange(i)">
+          <input type="checkbox" (change)="onCityCheckboxChange(i)" [checked]="selected_Cities.includes(city)">
           {{city}}
         </li>
       </ul>
@@ -133,7 +133,7 @@
       </div>
       <ul class="options">
         <li *ngFor="let zone of zones; let i = index">
-          <input type="checkbox" (change)="onZoneCheckboxChange(i)">
+          <input type="checkbox" (change)="onZoneCheckboxChange(i)" [checked]="selected_Zones.includes(zone)">
           {{zone}}
         </li>
       </ul>
@@ -155,7 +155,7 @@
       </div>
       <ul class="options">
         <li *ngFor="let area of areas; let i = index">
-          <input type="checkbox" (change)="onAreaCheckboxChange(i)">
+          <input type="checkbox" (change)="onAreaCheckboxChange(i)" [checked]="selected_Areas.includes(area)">
           {{area}}
         </li>
       </ul>

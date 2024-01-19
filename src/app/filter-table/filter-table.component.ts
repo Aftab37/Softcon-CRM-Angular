@@ -1,9 +1,10 @@
 // src\app\filter-table\filter-table.component.ts
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { SharedServiceService } from '../service/shared-service.service';
 import { InputData } from '../Models/InputData.Model';
 import { formatDate } from '@angular/common';
+import { FilterComponent } from '../filter/filter.component';
 
 @Component({
   selector: 'app-filter-table',
@@ -12,22 +13,32 @@ import { formatDate } from '@angular/common';
 })
 export class FilterTableComponent implements OnInit {
 
+  @ViewChild(FilterComponent) filterComponent!: FilterComponent;
+
   constructor(private sharedService: SharedServiceService) { }
 
   clients: any[] = [];
   ngOnInit(): void {
-    this.getTopFiveData();
-    console.log(this.selectedCities);
+    // this.filterData();
   }
 
-  getTopFiveData() {
-    this.sharedService.getTopFiveData().subscribe(data => {
-      this.clients = data;
-      console.log(this.clients);
-    });
+  ngAfterViewInit() {
+    this.filterData();  
   }
 
-  skipBlankMobile : boolean = false;
+  clearAllSelectionsInChild() {
+    if (this.filterComponent) {
+      this.filterComponent.clearAllSelections();
+    }
+  }
+  // getTopFiveData() {
+  //   this.sharedService.getTopFiveData().subscribe(data => {
+  //     this.clients = data;
+  //     console.log(this.clients);
+  //   });
+  // }
+
+  skipBlankMobile : boolean = true;
   skipBlankEmail : boolean = false;
 
   // fromDate: Date = new Date('2019-04-16T15:57:04.680Z'); 
@@ -105,7 +116,6 @@ export class FilterTableComponent implements OnInit {
       );
 
   }
-
 
   DownloadData(){
     this.GenerateExcel(this.filteredData,'Customer Data')

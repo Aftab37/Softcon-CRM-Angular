@@ -146,15 +146,36 @@
     margin: 0 20px 0 2px;
     position: relative;
     font-size: 12px;
+    font-weight: bold;
     background: #2b3f5d33;
     border: none;
     color: black;
+}
 
+.btn:hover {
+    background: #b3b3b3;
+}
+
+.clear-all-btn {
+    position: absolute;
+    right: 3.5%;
+    width: 10%;
+    height: 6%;
+    font-size: 12px;
+    font-weight: bold;;
+    background: #2b3f5d33;
+    border: none;
+    border-radius: 5px;
+}
+
+.clear-all-btn:hover {
+    background: #b3b3b3;
 }
 
 .badges {
     margin-left: 2%;
     display: flex;
+    /* border: 1px solid black; */
     
 }
 
@@ -164,12 +185,11 @@
     margin: 0 5px 0 5px;
     width: 20px;
     color: black;
-    font-size: 10px;
+    font-size: 10px;   
 }
 
 .individual-badge {
     display: inline;
-
 }
 
 .filter{
@@ -256,17 +276,15 @@ th{
     /* border: 1px solid red; */
     /* height: 100px; */
     /* text-align: center; */
-   
-    /* border: 2px solid red;    */
     /* position: absolute; */
     margin-top: 5%;
     height: 7%;
     width: 100%;
 }
 
-.btn-load{
+.btn-load {
     position: absolute;
-    margin-left: 55%;
+    right: 15%;
     margin-top: 0%;
     width: 10%;
     height: 6%;
@@ -283,27 +301,37 @@ th{
     
 
 .displayrecords{
+    position: absolute;
     /* border: 1px solid red; */
-    /* width: 14%;
-    margin-left: 37%;
-    margin-top: 2%; */
+    width: 10%;
+    bottom: 19.8%;
+    height: 5%;
+    /* right: 25%; */
+    margin-left: 2%;
+    margin-top: 2%;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 3.5px;
+    padding-left: 5px;
 }
 
 .lblrecords{
     /* margin-left: 10%;
     margin-top: 2%;
     font-weight: 600; */
+    
 }
 
 .totalrecords{
-    /* margin-left: 3%;
-    margin-top: 2%; */
+    margin-left: 3%;
+    /* margin-top: 2%; */
     
 }
 
 .btn-download{
     position: absolute;
-    margin-left: 66.5%;
+    /* margin-left: 66.5%; */
+    right: 3.5%;
     margin-top: 0%;
     width: 10%;
     height: 6%;

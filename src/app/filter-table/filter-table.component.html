@@ -14,11 +14,14 @@
   </div>
   <div class="data">
     <div class="filter-div">
-      <app-filter (selectedCitiesChange)="onSelectedCitiesChange($event)"
+      <app-filter 
         (selectedGroupsChange)="onSelectedGroupsChange($event)"
         (selectedSourceNamesChange)="onSelectedSourceNamesChange($event)"
-        (selectedNamesChange)="onSelectedNamesChange($event)" (selectedStatesChange)="onSelectedStatesChange($event)"
-        (selectedZonesChange)="onSelectedZonesChange($event)" (selectedAreasChange)="onSelectedAreasChange($event)">
+        (selectedNamesChange)="onSelectedNamesChange($event)" 
+        (selectedStatesChange)="onSelectedStatesChange($event)"
+        (selectedCitiesChange)="onSelectedCitiesChange($event)"
+        (selectedZonesChange)="onSelectedZonesChange($event)" 
+        (selectedAreasChange)="onSelectedAreasChange($event)" >
       </app-filter>
     </div>
     <div class="display-data">
@@ -26,7 +29,7 @@
         <div class="checkboxes">
           <div class="chk-div ">
             <label class="lbl">
-              <input type="checkbox" class="chk" [(ngModel)]="skipBlankMobile">
+              <input type="checkbox" class="chk" [(ngModel)]="skipBlankMobile" [checked]="skipBlankMobile">
               Skip Blank Mobile No
             </label>
           </div>
@@ -62,39 +65,42 @@
           </div> -->
         <div class="badges">
           <div class="individual-badge" *ngIf="selectedGroups.length > 0">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn">
               Groups <span class="badge bg-warning">{{selectedGroups.length}}</span>
             </button>
           </div>
           <div class="individual-badges" *ngIf="selectedSourceNames.length > 0">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn">
               Source Name <span class="badge bg-warning">{{selectedSourceNames.length}}</span>
             </button>
           </div>
           <div class="individual-badges" *ngIf="selectedNames.length > 0">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn">
               Names <span class="badge bg-warning">{{selectedNames.length}}</span>
             </button>
           </div>
           <div class="individual-badges" *ngIf="selectedStates.length > 0">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn">
               States <span class="badge bg-warning">{{selectedStates.length}}</span>
             </button>
           </div>
           <div class="individual-badges" *ngIf="selectedCities.length > 0">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn">
               Cities <span class="badge bg-warning">{{selectedCities.length}}</span>
             </button>
           </div>
           <div class="individual-badges" *ngIf="selectedZones.length > 0">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn">
               Zones <span class="badge bg-warning">{{selectedZones.length}}</span>
             </button>
           </div>
           <div class="individual-badges" *ngIf="selectedAreas.length > 0">
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn">
               Areas <span class="badge bg-warning">{{selectedAreas.length}}</span>
             </button>
+          </div>
+          <div class="clear-all-btn-div">
+            <button type="button" class="clear-all-btn" (click)="clearAllSelectionsInChild()">Clear All</button>
           </div>
         </div>
       </div>
@@ -129,12 +135,12 @@
           </tbody>
         </table>
       </div>
+      <div class="displayrecords">
+        <label class="lblrecords">Total Records:</label>
+        <label class="totalrecords">{{filteredData.length}}</label> 
+      </div>
       <div class="buttons-div">
         <button class="btn-load" (click)="filterData()">Load Data</button>
-        <!-- <div class="displayrecords">
-          <label class="lblrecords">Total Records:</label>
-          <label class="totalrecords">{{filteredData.length}}</label> 
-        </div> -->
         <button class="btn-download" (click)="DownloadData()">Download Data</button>
       </div>
       <!-- <div class="noteText">
