@@ -2,6 +2,7 @@
   import { ActivatedRoute, Router } from '@angular/router';
   import { SharedServiceService } from '../service/shared-service.service';
   import { Summary } from '@angular/compiler';
+import { SearchInput } from '../Models/SearchInput.Model';
 
   @Component({
     selector: 'app-filter',
@@ -47,12 +48,31 @@
 
     //#region Api Connection of getAllGroups
     groups: any[] = [];  
-    getAllGroups() {
-      this.sharedService.getAllGroups().subscribe(data => {
-        this.groups = this.trimArrayItems(data);
-        console.log("All the Groups", data);
-      });
+    // getAllGroups() {
+    //   this.sharedService.getAllGroups().subscribe(data => {
+    //     this.groups = this.trimArrayItems(data);
+    //     console.log("All the Groups", data);
+    //   });
+    // }
+
+    searchGroupLetters: string = '';
+    getAllGroups(): void {
+      const searchInput: SearchInput = {
+        SearchLetters: this.searchGroupLetters
+      };
+      console.log("SearchInput", searchInput)
+      this.sharedService.getAllGroups(searchInput)
+        .subscribe(
+          (response: any) => {
+            this.groups = this.trimArrayItems(response);
+            console.log("All the Groups", this.groups);
+          },
+          (error: any) => {
+            console.error('Error occurred:', error);
+         }
+        );
     }
+
     //#endregion
     //#region Api Connection of getAllStates
     states: any[] = [];
