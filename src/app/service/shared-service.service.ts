@@ -18,43 +18,39 @@ export class SharedServiceService {
     return this.http.get<any>(this.baseApiUrl + '/api/GetAllClientData');
   }
 
-  // getAllGroups(): Observable<any> {
-  //   return this.http.get<any>(this.baseApiUrl + '/api/GetGroups');
-  // }
-
-  getAllStates(): Observable<any> {
-    return this.http.get<any>(this.baseApiUrl + '/api/GetStates');
+  getAllGroups(data: any): Observable<any> {
+    return this.http.post(this.baseApiUrl + '/api/GetGroups', data  );
   }
 
-  getAllCities(): Observable<any> {
-    return this.http.get<any>(this.baseApiUrl + '/api/GetCities');
+  getAllSourceNames(data: any): Observable<any> {
+    return this.http.post(this.baseApiUrl + '/api/GetSourceNames', data  );
   }
 
-  getAllZones(): Observable<any> {  
-    return this.http.get<any>(this.baseApiUrl + '/api/GetZones');
+  getAllCities(data: any): Observable<any> {
+    return this.http.post(this.baseApiUrl + '/api/GetCities', data);
   }
 
-  getAllAreas(): Observable<any> {
-   return this.http.get<any>(this.baseApiUrl + '/api/GetArea');
+  getAllStates(data: any): Observable<any> {
+    return this.http.post(this.baseApiUrl + '/api/GetStates', data);
   }
 
-  getAllSourceNames(): Observable<any> {
-    return this.http.get<any>(this.baseApiUrl + '/api/GetSourceNames');
+  getAllNames(data: any): Observable<any> {
+    return this.http.post(this.baseApiUrl + '/api/GetCustomerName', data);
   }
 
-  getAllNames(): Observable<any> {  
-    return this.http.get<any>(this.baseApiUrl + '/api/GetCustomerName');
+  getAllZones(data: any): Observable<any> {
+    return this.http.post(this.baseApiUrl + '/api/GetZones', data);
   }
 
+  getAllAreas(data: any): Observable<any> {
+    return this.http.post(this.baseApiUrl + '/api/GetArea', data);
+  }
+  
   //#region Post methods of filter data
   filterData(data: any): Observable<any> {
     return this.http.post(this.baseApiUrl + '/api/FilterData', data  );
   }
   //#endregion
 
-  getAllGroups(data: any): Observable<any> {
-    return this.http.post(this.baseApiUrl + '/api/GetGroups', data  );
-  }
-
-
+ 
 }

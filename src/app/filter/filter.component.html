@@ -18,7 +18,7 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchGroupLetters" (input)="onGroupSearchInput()" >
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
@@ -40,7 +40,7 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]=" SearchSourceNameLetters" (input)="onSourceNameSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
@@ -62,7 +62,7 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchNameLetters" (input)="onNameSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
@@ -84,7 +84,7 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchStateLetters" (input)="onStateSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
@@ -106,7 +106,7 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)] = "searchCityLetters" (input)="onCitySearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
@@ -128,7 +128,7 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchZoneLetters" (input)="onZoneSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
@@ -150,7 +150,7 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchAreaLetters" (input)="onAreaSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
