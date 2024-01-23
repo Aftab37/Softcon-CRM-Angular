@@ -64,7 +64,7 @@ export class FilterComponent implements OnInit {
     this.sharedService.getAllGroups(searchInput)
       .subscribe(
         (response: any) => {
-          this.groups = this.trimArrayItems(response);
+          this.groups = (response);
           console.log("All the Groups", this.groups);
         },
         (error: any) => {
