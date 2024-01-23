@@ -35,13 +35,13 @@
           </div>
           <div class="chk-div ">
             <label class="lbl">
-              <input type="checkbox" class="chk" [(ngModel)]="skipBlankEmail">
+              <input type="checkbox" class="chk" [(ngModel)]="skipBlankEmail" [checked]="skipBlankEmail">
               Skip Blank Email
             </label>
           </div>
           <div class="chk-div ">
             <label class="lbl">
-              <input type="checkbox" class="chk">
+              <input type="checkbox" class="chk" [(ngModel)]="ignoreDuplicateRecords" [checked]="ignoreDuplicateRecords">
               Ignore Duplicate Records
             </label>
           </div>

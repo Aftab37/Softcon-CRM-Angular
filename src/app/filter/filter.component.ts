@@ -42,9 +42,9 @@ export class FilterComponent implements OnInit {
   /// Aftab Ansari - 8 January 2024
   /// </summary>
 
-  trimArrayItems(array: string[]) {
-    return array.map(item => item.trim());
-  }
+  // trimArrayItems(array: string[]) {
+  //   return array.map(item => item.trim());
+  // }
 
   //#region Api Connection of getAllGroups and filtering options
   groups: any[] = [];
@@ -92,7 +92,8 @@ export class FilterComponent implements OnInit {
     this.sharedService.getAllStates(searchInput)
       .subscribe(
         (response: any) => {
-          this.states = this.trimArrayItems(response);
+          // this.states = this.trimArrayItems(response);
+          this.states = response;
           console.log("All the States", this.states);
         },
         (error: any) => {
@@ -120,7 +121,8 @@ export class FilterComponent implements OnInit {
     this.sharedService.getAllCities(searchInput)
       .subscribe(
         (response: any) => {
-          this.cities = this.trimArrayItems(response);
+          // this.cities = this.trimArrayItems(response);
+          this.cities = response;
           console.log("All the Cities", this.cities);
         },
         (error: any) => {
@@ -148,7 +150,8 @@ export class FilterComponent implements OnInit {
     this.sharedService.getAllZones(searchInput)
       .subscribe(
         (response: any) => {
-          this.zones = this.trimArrayItems(response);
+          // this.zones = this.trimArrayItems(response);
+          this.zones = response;
           console.log("All the Zones", this.zones);
         },
         (error: any) => {
@@ -176,7 +179,8 @@ export class FilterComponent implements OnInit {
     this.sharedService.getAllAreas(searchInput)
       .subscribe(
         (response: any) => {
-          this.areas = this.trimArrayItems(response);
+          // this.areas = this.trimArrayItems(response);
+          this.areas = response;
           console.log("All the Area", this.areas);
         },
         (error: any) => {
@@ -204,7 +208,8 @@ export class FilterComponent implements OnInit {
     this.sharedService.getAllSourceNames(searchInput)
       .subscribe(
         (response: any) => {
-          this.sourceNames = this.trimArrayItems(response);
+          // this.sourceNames = this.trimArrayItems(response);
+          this.sourceNames = response;
           console.log("All the Source Names", this.sourceNames);
         },
         (error: any) => {
@@ -232,7 +237,8 @@ export class FilterComponent implements OnInit {
     this.sharedService.getAllNames(searchInput)
       .subscribe(
         (response: any) => {
-          this.names = this.trimArrayItems(response);
+          // this.names = this.trimArrayItems(response);
+          this.names = response;
           console.log("All the Names", this.names);
         },
         (error: any) => {
@@ -380,5 +386,4 @@ export class FilterComponent implements OnInit {
     console.log('Cleared Selected Checkbox form child component:');
   }
   //#endregion
-
 }

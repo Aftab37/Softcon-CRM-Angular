@@ -18,18 +18,19 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchGroupLetters" (input)="onGroupSearchInput()" >
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search"
+          [(ngModel)]="searchGroupLetters" (input)="onGroupSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
-        <li *ngFor="let group of groups; let i = index" >
+        <li *ngFor="let group of groups; let i = index">
           <input type="checkbox" (change)="onGroupCheckboxChange(i)" [checked]="selected_Groups.includes(group)">
-          {{group}}
+          {{group.trim()}}
         </li>
       </ul>
     </div>
   </div>
-<!-- ******************************************************************************************************* -->
+  <!-- ******************************************************************************************************* -->
   <div class="wrapper" [class.active]="isActive[1]">
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(1)">
@@ -40,13 +41,15 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]=" SearchSourceNameLetters" (input)="onSourceNameSearchInput()">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search"
+          [(ngModel)]=" SearchSourceNameLetters" (input)="onSourceNameSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
         <li *ngFor="let sourceName of sourceNames; let i = index">
-          <input type="checkbox" (change)="onSourceNameCheckboxChange(i)" [checked]="selected_SourceNames.includes(sourceName)">
-          {{sourceName}}
+          <input type="checkbox" (change)="onSourceNameCheckboxChange(i)"
+            [checked]="selected_SourceNames.includes(sourceName)">
+          {{sourceName.trim()}}
         </li>
       </ul>
     </div>
@@ -62,18 +65,19 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchNameLetters" (input)="onNameSearchInput()">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search"
+          [(ngModel)]="searchNameLetters" (input)="onNameSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
         <li *ngFor="let name of names; let i = index">
-          <input type="checkbox" (change)="onNameCheckboxChange(i)" [checked]="selected_Names.includes(name)" >
-          {{name}}
+          <input type="checkbox" (change)="onNameCheckboxChange(i)" [checked]="selected_Names.includes(name)">
+          {{name.trim()}}
         </li>
       </ul>
     </div>
   </div>
-<!-- ******************************************************************************************************* -->
+  <!-- ******************************************************************************************************* -->
   <div class="wrapper" [class.active]="isActive[3]">
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(3)">
@@ -84,18 +88,19 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchStateLetters" (input)="onStateSearchInput()">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search"
+          [(ngModel)]="searchStateLetters" (input)="onStateSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
         <li *ngFor="let state of states; let i = index">
-          <input type="checkbox" (change)="onStateCheckboxChange(i)" [checked]="selected_States.includes(state)" >
-          {{state}}
+          <input type="checkbox" (change)="onStateCheckboxChange(i)" [checked]="selected_States.includes(state)">
+          {{state.trim()}}
         </li>
       </ul>
     </div>
   </div>
-<!-- ******************************************************************************************************** -->
+  <!-- ******************************************************************************************************** -->
   <div class="wrapper" [class.active]="isActive[4]">
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(4)">
@@ -106,18 +111,19 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)] = "searchCityLetters" (input)="onCitySearchInput()">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search"
+          [(ngModel)]="searchCityLetters" (input)="onCitySearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
         <li *ngFor="let city of cities; let i = index">
           <input type="checkbox" (change)="onCityCheckboxChange(i)" [checked]="selected_Cities.includes(city)">
-          {{city}}
+          {{city.trim()}}
         </li>
       </ul>
     </div>
   </div>
-<!-- ******************************************************************************************************** -->
+  <!-- ******************************************************************************************************** -->
   <div class="wrapper" [class.active]="isActive[5]">
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(5)">
@@ -128,18 +134,19 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchZoneLetters" (input)="onZoneSearchInput()">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search"
+          [(ngModel)]="searchZoneLetters" (input)="onZoneSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
         <li *ngFor="let zone of zones; let i = index">
           <input type="checkbox" (change)="onZoneCheckboxChange(i)" [checked]="selected_Zones.includes(zone)">
-          {{zone}}
+          {{zone.trim()}}
         </li>
       </ul>
     </div>
   </div>
-<!-- ******************************************************************************************************** -->
+  <!-- ******************************************************************************************************** -->
   <div class="wrapper" [class.active]="isActive[6]">
     <div class="simple-line"></div>
     <div class="select-btn" (click)="toggleDropdown(6)">
@@ -150,16 +157,16 @@
     <div class="content">
       <div class="search">
         <i class="fa-solid fa-magnifying-glass dropdown-search-icon"></i>
-        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search" [(ngModel)]="searchAreaLetters" (input)="onAreaSearchInput()">
+        <input class="input-dropdown" spellcheck="false" type="text" placeholder="Search"
+          [(ngModel)]="searchAreaLetters" (input)="onAreaSearchInput()">
         <i class="fa-solid fa-microphone dropdown-search-mic-icon"></i>
       </div>
       <ul class="options">
         <li *ngFor="let area of areas; let i = index">
           <input type="checkbox" (change)="onAreaCheckboxChange(i)" [checked]="selected_Areas.includes(area)">
-          {{area}}
+          {{area.trim()}}
         </li>
       </ul>
     </div>
   </div>
 </div>
-

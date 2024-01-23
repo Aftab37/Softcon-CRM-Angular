@@ -40,6 +40,7 @@ export class FilterTableComponent implements OnInit {
 
   skipBlankMobile : boolean = true;
   skipBlankEmail : boolean = false;
+  ignoreDuplicateRecords : boolean = false; 
 
   // fromDate: Date = new Date('2019-04-16T15:57:04.680Z'); 
   // toDate: Date = new Date('2019-04-20T15:57:04.680Z'); 
@@ -83,8 +84,26 @@ export class FilterTableComponent implements OnInit {
     console.log('Updated Selected Areas in Parent Component:', selectedAreas);
   }
 
+  areAnyFiltersSelected(): boolean {
+    return (
+      this.selectedGroups.length > 0 ||
+      this.selectedSourceNames.length > 0 ||
+      this.selectedNames.length > 0 ||
+      this.selectedStates.length > 0 ||
+      this.selectedCities.length > 0 ||
+      this.selectedZones.length > 0 ||
+      this.selectedAreas.length > 0
+    );
+  }
+
   filteredData: any[] = [];
   filterData(): void {
+    if (!this.areAnyFiltersSelected()) {
+      // No filters selected, show alert to the user
+      alert('Please apply atleast one filter');
+      return;
+    }
+
     console.log(this.fromDate);
     console.log(this.toDate);
 
@@ -99,7 +118,9 @@ export class FilterTableComponent implements OnInit {
       Zone: this.selectedZones,
       AreaList: this.selectedAreas,
       SkipBlankMobile: this.skipBlankMobile,
-      SkipBlankEmail: this.skipBlankEmail
+      SkipBlankEmail: this.skipBlankEmail,
+      IgnoreDuplicateRecords: this.ignoreDuplicateRecords,
+      //PageNo: 1
     };
 
     console.log("inputData", inputData)
@@ -107,14 +128,17 @@ export class FilterTableComponent implements OnInit {
     this.sharedService.filterData(inputData)
       .subscribe(
         (response: any) => {
+          if (!response || response.length === 0) {
+            alert('No data found based on the applied filters.');
+          } else {
           this.filteredData = response;
           console.log("Received Data", this.filteredData);
+          }
         },
         (error: any) => {
           console.error('Error occurred:', error);
         }
       );
-
   }
 
   DownloadData(){
@@ -142,7 +166,6 @@ export class FilterTableComponent implements OnInit {
     window.URL.revokeObjectURL(url);
     a.remove();
   }
-
 }
 
 

@@ -12,6 +12,7 @@ export interface InputData {
     AreaList: string[];
     SkipBlankMobile: boolean;
     SkipBlankEmail: boolean;
+    IgnoreDuplicateRecords: boolean;
     //PageNo: number;
 }
   
