@@ -5,10 +5,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
   
 .container-div{
-    /* border: 1px solid black; */
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     height: 100vh;
@@ -26,120 +25,82 @@
 }
 
 .marketingText{
-    /* margin-top: 1%; */
     margin-left: 1%;
 }
 
 .menu{
-    /* border: 1px solid black; */
     height: 4%;
     display: flex;
     align-items: center;
 }
-
 .menu i{
     margin-left: 1%;
     font-size: 26px;
     color: rgb(118, 118, 246);
 }
-
 .data{
     display: flex;
     height: 88%;
-    /* border: 1px solid black; */
 }
-
 .filter-div{
-    /* border: 1px solid red; */
     width: 20%;
     background: #2b3f5d33;
     border-radius: 10px;
     margin-left: 10px;
 }
-
 .display-data{
-    /* border: 1px solid black; */
     width: 80%;
-    /* height: 80vh; */
 }
-
 .chk-date{
     display: flex;
     height: 6%;
-    /* border: 1px solid red; */
 }
-
 .checkboxes{
     display: flex;
     width: 55%;
-    /* justify-content: space-evenly; */
-    /* border: 1px solid blue; */
     margin-left: 2%;
     background: #2b3f5d33;
     border-radius: 5px;
 }
-
 .chk-div{
-    /* border: 1px solid green; */
     display: flex;
-    /* width: 24%; */
     margin-left: 3%;
     align-items: center;
     font-size: 12px;
     font-weight: bold;
 }
-
-.chk{
-    /* margin-right: 4%; */
-    /* height: 30%; */
-    /* width: 30%; */
-    /* margin-top: -2%; */
-}
-
-
 .customize-dates{
     display: flex;
     width: 46%;
-    /* border: 1px solid blue; */
 }
-
 .fromdate{
     display: flex;
     align-items: center;
     margin-left: 8%;
     width: 35%;
     font-size: 12px;
-    /* font-weight: 500; */
-    /* border: 1px solid blue; */
 }
-
 .todate{
     display: flex;
     align-items: center;
     margin-left: 8%;
     width: 35%;
     font-size: 12px;
-    /* border: 1px solid blue; */
 }
-
 .inputdate{
     margin-left: 4%;
     margin-top: -2%;
     border-radius: 6px;
 }
-
 .applied-filter{
     margin-top: 0.5%;
     margin-left: 2.2%;
 }
-
 .Selected-Dropdown-Badges {
-    /* border: 1px solid red; */
     margin-top: 2px;
     height: 6%;
     border-radius: 0px;
 }
-
 .btn {
     padding: 5px;
     border-radius: 5px;
@@ -151,11 +112,9 @@
     border: none;
     color: black;
 }
-
 .btn:hover {
     background: #b3b3b3;
 }
-
 .clear-all-btn {
     position: absolute;
     right: 3.5%;
@@ -167,18 +126,13 @@
     border: none;
     border-radius: 5px;
 }
-
 .clear-all-btn:hover {
     background: #b3b3b3;
 }
-
 .badges {
     margin-left: 2%;
     display: flex;
-    /* border: 1px solid black; */
-    
 }
-
 .badge {
     padding: 5px;
     border-radius: 50px;
@@ -187,43 +141,30 @@
     color: black;
     font-size: 10px;   
 }
-
 .individual-badge {
     display: inline;
 }
-
 .filter{
     border: 1px solid red;
     position: relative;
     width: 5%;
     text-align: center;
     margin-left: 2%;
-    /* margin-top: 2%; */
 }
-
 .filtername{
     margin-top: 6%;
 }
-
 .filter i{
-    /* margin-left: 1%; */
     position: absolute;
     margin-top: -10%;
-    /* margin-left: 42%; */
 }
-
 .tabledata{
-    /* border: 1px solid green; */
-    /* height: 40%;
-    width: 50%; */
     height: 200px;
     width: 95%;
     padding: 10px;
     margin-left: 1.5%;
 }
-
 .table {
-    /* position: relative; */
     top: 0%;
     height: 80%;
     width: 100%;
@@ -231,57 +172,38 @@
     font-size: 10px;
 }
 .sample-txt-div {
-    /* border: 1px solid #ccc; */
-    /* height: 20%; */
     margin-top: 1%;
-    /* margin-top: 5px; */
-    /* position: relative; */
-
 }
 .sampletxt{
     position: relative;
     margin-left: 2.5%;
     text-decoration: underline;
 }
-
 table,th,td{
     border: 1px solid black;
     font-weight: bold;
 }
-
 table{
     margin-left: 6%;
     text-align: center;
 }
-
 th{
-    /* width: 10%; */
-    /* background-color: rgb(118, 118, 246); */
     color: #fff;
     height: 100%;
 }
-
-
 .noteText{
     margin-left: 6%;
     margin-top: 2%;
     font-size: 16px;
 }
-
 .notelbl{
     font-weight: 600;
 }
-
 .buttons-div{
-    /* border: 1px solid red; */
-    /* height: 100px; */
-    /* text-align: center; */
-    /* position: absolute; */
     margin-top: 5%;
     height: 7%;
     width: 100%;
 }
-
 .btn-load {
     position: absolute;
     right: 15%;
@@ -294,19 +216,14 @@ th{
     font-weight: bold;
     border: none;
 }
-
 .btn-load:hover {
     background: #b3b3b3;
 }
-    
-
 .displayrecords{
     position: absolute;
-    /* border: 1px solid red; */
     width: 10%;
     bottom: 19.8%;
     height: 5%;
-    /* right: 25%; */
     margin-left: 2%;
     margin-top: 2%;
     font-size: 12px;
@@ -314,23 +231,11 @@ th{
     padding-top: 3.5px;
     padding-left: 5px;
 }
-
-.lblrecords{
-    /* margin-left: 10%;
-    margin-top: 2%;
-    font-weight: 600; */
-    
-}
-
 .totalrecords{
     margin-left: 3%;
-    /* margin-top: 2%; */
-    
 }
-
 .btn-download{
     position: absolute;
-    /* margin-left: 66.5%; */
     right: 3.5%;
     margin-top: 0%;
     width: 10%;
@@ -341,29 +246,17 @@ th{
     font-weight: bold;
     border: none;
 }
-
 .btn-download:hover {
     background: #b3b3b3;
 }
 .show-record{
-    /* border: 1px solid blue; */
     height: 8%;
 }
-
 .lbldate{
     margin-left: 6%;
-    /* border: 1px solid blue; */
     font-size: 16px;
-    /* margin-top: 1%; */
 }
-
 .recorddate{
-    /* border: 1px solid blue; */
     font-size: 16px;
     margin-left: 1%;
-}
-
-.filter-dropdowns-div {
-/* margin-top: 50%; */
-
 }

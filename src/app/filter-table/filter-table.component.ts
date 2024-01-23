@@ -99,7 +99,6 @@ export class FilterTableComponent implements OnInit {
   filteredData: any[] = [];
   filterData(): void {
     if (!this.areAnyFiltersSelected()) {
-      // No filters selected, show alert to the user
       alert('Please apply atleast one filter');
       return;
     }
@@ -147,7 +146,6 @@ export class FilterTableComponent implements OnInit {
 
   GenerateExcel(Data: any, fileName: string) {
     const replacer = (key:any,value:any) => (value === null? '' : value);
-    // specify how you want to handle null values here
     const header = Object.keys(Data[0]);
     const csv = Data.map(
       (row:any) => header.map((fieldName) => JSON.stringify(row[fieldName],replacer)).join(',')
