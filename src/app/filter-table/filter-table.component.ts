@@ -23,7 +23,7 @@ export class FilterTableComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.filterData();  
+    this.filterData();
   }
 
   clearAllSelectionsInChild() {
@@ -38,9 +38,9 @@ export class FilterTableComponent implements OnInit {
   //   });
   // }
 
-  skipBlankMobile : boolean = true;
-  skipBlankEmail : boolean = false;
-  ignoreDuplicateRecords : boolean = false; 
+  skipBlankMobile: boolean = true;
+  skipBlankEmail: boolean = false;
+  ignoreDuplicateRecords: boolean = false;
 
   // fromDate: Date = new Date('2019-04-16T15:57:04.680Z'); 
   // toDate: Date = new Date('2019-04-20T15:57:04.680Z'); 
@@ -130,8 +130,8 @@ export class FilterTableComponent implements OnInit {
           if (!response || response.length === 0) {
             alert('No data found based on the applied filters.');
           } else {
-          this.filteredData = response;
-          console.log("Received Data", this.filteredData);
+            this.filteredData = response;
+            console.log("Received Data", this.filteredData);
           }
         },
         (error: any) => {
@@ -140,25 +140,41 @@ export class FilterTableComponent implements OnInit {
       );
   }
 
-  DownloadData(){
-    this.GenerateExcel(this.filteredData,'Customer Data')
+  transformDate(item: any): any {
+    const transformedItem = { ...item };
+    if (transformedItem.recordCreated) {
+      const date = new Date(transformedItem.recordCreated);
+      transformedItem.recordCreated = formatDate(date, 'yyyy-MM-dd', 'en');
+    }
+    return transformedItem;
+  }
+  
+  filteredDataWithoutSpecifiedColumn: any[] = [];
+  readyToPrint: any[] = [];
+  DownloadData() {
+    this.filteredDataWithoutSpecifiedColumn = this.filteredData.map(item => {
+      const { id,softconClientID,recordID,tableID,isDistributor,isNewRecord, ...filteredItem } = item;
+      return filteredItem;
+    });
+    this.readyToPrint = this.filteredDataWithoutSpecifiedColumn.map(item => this.transformDate(item));
+    this.GenerateExcel(this.readyToPrint, 'Customer Data')
   }
 
   GenerateExcel(Data: any, fileName: string) {
-    const replacer = (key:any,value:any) => (value === null? '' : value);
+    const replacer = (key: any, value: any) => (value === null ? '' : value);
     const header = Object.keys(Data[0]);
     const csv = Data.map(
-      (row:any) => header.map((fieldName) => JSON.stringify(row[fieldName],replacer)).join(',')
+      (row: any) => header.map((fieldName) => JSON.stringify(row[fieldName], replacer)).join(',')
     );
     csv.unshift(header.join(','));
     // csv.pop();
     const csvArray = csv.join('\r\n');
     const a = document.createElement('a');
-    const blob = new Blob([csvArray], { type:'textcsv' });
+    const blob = new Blob([csvArray], { type: 'textcsv' });
     const url = window.URL.createObjectURL(blob);
     a.href = url;
     let todaydate = formatDate(new Date(), 'ddMMyyyy', 'en');
-    a.download = 'MIS SaleSales Return Summary(' + todaydate +').csv';
+    a.download = 'MIS SaleSales Return Summary(' + todaydate + ').csv';
     a.download = '' + fileName + '(' + todaydate + ').csv';
     a.click();
     window.URL.revokeObjectURL(url);
