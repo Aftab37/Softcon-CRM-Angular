@@ -29,7 +29,7 @@ export class SharedServiceService {
   getAllCities(data: any): Observable<any> {
     return this.http.post(this.baseApiUrl + '/api/GetCities', data);
   }
-
+  
   getAllStates(data: any): Observable<any> {
     return this.http.post(this.baseApiUrl + '/api/GetStates', data);
   }

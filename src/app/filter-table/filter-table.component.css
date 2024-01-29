@@ -121,13 +121,14 @@
     width: 10%;
     height: 6%;
     font-size: 12px;
-    font-weight: bold;;
-    background: #2b3f5d33;
+    font-weight: bold;
+    background: red;
+    color: white;
     border: none;
     border-radius: 5px;
 }
 .clear-all-btn:hover {
-    background: #b3b3b3;
+    background: rgb(116, 0, 0);
 }
 .badges {
     margin-left: 2%;
@@ -242,12 +243,13 @@ th{
     height: 6%;
     font-size: 12px;
     border-radius: 5px;
-    background-color: #2b3f5d33;
+    background-color: rgb(0, 192, 0);
     font-weight: bold;
     border: none;
+    color: white;
 }
 .btn-download:hover {
-    background: #b3b3b3;
+    background:rgb(0, 127, 0);
 }
 .show-record{
     height: 8%;
